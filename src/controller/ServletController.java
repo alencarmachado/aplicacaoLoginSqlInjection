@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,12 +48,27 @@ public class ServletController extends HttpServlet {
 			}
 			
 			
+			RequestDispatcher dispatcher;			 
+			
 			if(logado){
+			
+				String pagina = "/principal.jsp";
+				request.setAttribute("usuario", us);
+				dispatcher= getServletContext().getRequestDispatcher(pagina);
+				dispatcher.forward(request,response);
 				System.out.println("logado");
 			}else{
+				
+				String pagina = "/index.jsp";
+				request.setAttribute("msg", "Usuário ou Senha inválidos");
+				dispatcher= getServletContext().getRequestDispatcher(pagina);
+				dispatcher.forward(request,response);
 				System.out.println("NAO LOGADO ....");
 			}
 		
+			
+			//o foward encaminha os objetos request/response para outro tratador de requisicao (jsp/servlet) 
+			// o redirect retorna pro browser, qual o novo caminho (URL) ele deve disparar... 
 	}
 
 	/**

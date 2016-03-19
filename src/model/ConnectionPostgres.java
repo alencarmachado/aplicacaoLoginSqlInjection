@@ -14,7 +14,8 @@ public class ConnectionPostgres {
 		try {
 
 			Class.forName("org.postgresql.Driver");
-			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/bancosqlinjection", "postgres", "teste001");
+			//c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/bancosqlinjection", "postgres", "teste001");
+			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/bancosqlinjection", "postgres", "123");
 
 		} catch (Exception e) {
 			e.printStackTrace();

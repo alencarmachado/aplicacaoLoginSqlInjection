@@ -5,8 +5,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/**
+ * 
+ * @author Alencar
+ *
+ */
 public class UsuarioDao {
+	
+	/**
+	    create table usuario(codigo serial, login varchar(40) not null, 
+		senha varchar(40) not null, primary key(codigo))
+	 */
 	
 	public static void main(String args[]){
 		UsuarioDao ud = new UsuarioDao();
@@ -18,7 +27,7 @@ public class UsuarioDao {
 		//u.setSenha("'or'1'='1");
 		
 		//''or'1'='1'
-		
+		 
 		try {
 		System.out.println(new UsuarioDao().logado(u));
 			

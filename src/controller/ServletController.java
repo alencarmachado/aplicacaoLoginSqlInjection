@@ -52,7 +52,7 @@ public class ServletController extends HttpServlet {
 			
 			if(logado){
 			
-				String pagina = "/principal.jsp";
+				String pagina = "/WEB-INF/jsp/principal.jsp";
 				request.setAttribute("usuario", us);
 				dispatcher= getServletContext().getRequestDispatcher(pagina);
 				dispatcher.forward(request,response);

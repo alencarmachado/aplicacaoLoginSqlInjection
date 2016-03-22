@@ -49,7 +49,7 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="http://localhost:8080/appJavaWebRevisao/tarefaController">Tarefas</a></li>
+                  <li><a href="#">Tarefas</a></li>
                   <li><a href="#">....</a></li>
                   <li><a href="#">....</a></li>
                   <li role="separator" class="divider"></li>
